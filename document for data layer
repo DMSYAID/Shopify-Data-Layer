@@ -1,0 +1,69 @@
+### **Enabling Data Layer on  Shopify (Updated: 8 March 2023)**
+
+### **Step-1: Create the dataLayer-allPages snippet ( use exact naming and casing) & copy and paste the below code**
+
+### Go to Online Store ----> Themes ----> Snippets ----> Add a new snippet
+
+### Name: ****dataLayer-allPages
+
+**Shopify All Page Data Layer Code:**
+
+[https://docs.google.com/document/d/19AwzZ8guYkWIN9pNB4EgsTr9Ey1lV2w3ecyX1UUfuiI/edit?usp=sharing](https://docs.google.com/document/d/19AwzZ8guYkWIN9pNB4EgsTr9Ey1lV2w3ecyX1UUfuiI/edit?usp=sharing)
+
+Or
+
+[All Page Data Layer Code](https://www.notion.so/All-Page-Data-Layer-Code-d48f3afd9be74277b8feb0ff8cee7c1d)
+
+### and **Replace GTM code 1 space**
+
+*In the code bottom, don't forget to change the GTM code and custom domain*
+
+---
+
+### **Step-2: Install Data Layer 1st call code on Shopify**
+
+**Login into Shopify admin panel:**
+
+### Online Store----> Themes ----> Actions ----> Edit Code ----> Layout ----> theme.liquid (File) ---->
+
+> Put the Data Layer call code  directly below the opening <head> tag
+
+Add the code to the layouts
+
+- Within the theme.liquid layout, place this include snippet {% include 'dataLayer-allPages' %} right before the closing tag
+
+![Screenshot_4.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/12ac8629-be50-4e34-aa5d-d5c729798372/Screenshot_4.png)
+
+**Alla page:** 
+
+```jsx
+**{% include 'dataLayer-allPages' %}**
+```
+
+- Within the checkout.liquid layout, place this include snippet {% include 'dataLayer-allPages' %} right before the closing tag
+
+**Checkout page:** 
+
+```jsx
+**{% include 'dataLayer-allPages' %}**
+```
+
+---
+
+### **Step-03: Put the bellow code on Checkout or Purchase Confirmation Page**
+
+### Go to Settings ----> Checkout ----> **Order status page** ----> scripts (Additional scripts)
+
+**Code for Checkout page:**
+
+[https://docs.google.com/document/d/1Kl6RcPdBImq1rE3UftV8n_1FZjDq6fyK8ndsuWhV8dY/edit?usp=sharing](https://docs.google.com/document/d/1Kl6RcPdBImq1rE3UftV8n_1FZjDq6fyK8ndsuWhV8dY/edit?usp=sharing)
+
+Or
+
+[Checkout Page | Purchase Data Layer](https://www.notion.so/Checkout-Page-Purchase-Data-Layer-99cebf85909649109e85ebdd4a7e1f29) 
+
+### and **Replace GTM code 1 space**
+
+---
+
+### **Step-04: Go to the Google tag manager and Preview the data**
